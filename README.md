@@ -252,7 +252,8 @@ Finally, run make clean to remove those unnecessary files and enable the eSASS e
 <u>It is recommended to add this line to your profile (.bashrc, zshrc or cshrc) for automatic initialisation.</u>
 
 
-========================================================================================================
+============================================================================
+
 <ins>If you have more questions about the installation, please feel free to contact me.</ins>
 
 My email: helin@smail.nju.edu.cn
