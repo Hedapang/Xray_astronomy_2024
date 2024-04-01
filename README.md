@@ -1,9 +1,9 @@
 # Xray_astronomy_2024
 
 * * *
-### Software Installation 
-#### 1. Install HEASoft (Need Linux or macOS system)
-**1.1 Downolad HEASoft source code suitbale for your system (e.g. macOS, Ubuntu, etc) at:**
+## Software Installation 
+### 1. Install HEASoft (Need Linux or macOS system)
+#### 1.1 Downolad HEASoft source code suitbale for your system (e.g. macOS, Ubuntu, etc) at:
 [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html)
 
 ★ Current version is 6.33.1! If you have an older one, just use it.
@@ -14,11 +14,12 @@
 
 <ins>Ensure you have enough memory (> 10 GB) to download and install heasoft successfully!</ins>
 
-**1.2 Install the prerequisite packages (X11, Compilers: C, C++, Perl & Fortran, Python)**
+
+#### 1.2 Install the prerequisite packages (X11, Compilers: C, C++, Perl & Fortran, Python)
 
 For Mac users (Intel/M1/M2 chip):
 
-following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/macos.html)
+following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/macos.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/macos.html)
 
     install [XQuartz](https://www.xquartz.org)
     xcode-select --install
@@ -26,10 +27,11 @@ following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html](ht
     brew install perl
     brew install libpng
     conda install astropy numpy scipy matplotlib pip
+    
 
 For Ubuntu users:
 
-following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ linux.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/linux.html)
+following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/linux.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/linux.html)
 
     sudo apt-get -y install libreadline-dev
     sudo apt-get -y install libncurses5-dev
@@ -47,13 +49,15 @@ following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ linux.html](ht
     sudo apt-get -y install numpy
     sudo apt-get -y install python3-astropy
     sudo apt-get -y install python3-scipy
+    
 
-**1.3 Configure the software**
+#### 1.3 Configure the software
 
 (1) Unpack the downloaded file in a clean directory (your home directory is highly recommended)
 
     cd /usr/local/  # or any other directory you prefer
     sudo tar zxvf /path/to/the/downloaded/file/heasoft-6.33src.tar.gz # change according to your path and filename 
+
 
 (2) Build the environment --
 
@@ -72,6 +76,7 @@ For users of C Shell variants (csh, tcsh):
     setenv CXX /usr/bin/clang++ 
     setenv FC /usr/local/bin/gfortran-12 
     setenv PERL /usr/bin/perl
+
     
 (3) Go to the heasoft-6.33/BUILD_DIR directory and configure the software for your platform.
 
@@ -88,14 +93,15 @@ For users of C Shell variants (csh, tcsh):
     ./configure >& config.txt
     make >& build.log
     make install >& install.log
-    
+
 This step will capture the screen outputs to text files, and if you want to see the outputs instantaneously, just ./configure, make and make install.
 
 <ins> At the configure step -- only if you see "Finished" at the end of the output, it means the configuration is successful. If errors occur, be patient to solve them step by step. </ins>
 
 <ins> The make step may take a long time (~ 1 hour, just let it run and do your things). If your process finished in a few minutes, check if there are any errors. </ins>
 
-**1.4 Initialization**
+
+#### 1.4 Initialization
 
 Add the following commands in your profile --
 
@@ -115,11 +121,13 @@ aarch64-apple-darwin22.6.0
 
 <ins>You can always find your PLATFORM in the heasoft-6.33/ directory (i.e. the name of a sub-directory)</ins>
 
+
 Once you finish this step, open a new terminal and try:
 
     heainit
     xspec
-    
+
+
 If you enter the Xspec environment without any error, the initialization is done! Now you can have a break and dive into the X-ray data analysis!
 
 
@@ -129,30 +137,30 @@ For more details about the HEASoft installation, it is highly recommend to refer
 You can always find some useful information in these official guide.
 
 
-#### 2. Install eSASS
+### 2. Install eSASS
 
 For reference, see:
 [https://erosita.mpe.mpg.de/edr/DataAnalysis/esassinstall.html](https://erosita.mpe.mpg.de/edr/DataAnalysis/esassinstall.html)
 
-**2.1 Download eSASS and CALDB**
+#### 2.1 Download eSASS and CALDB
 
 Minimum requirements:
+
 ✓ CPU: x86-64 CPU (Intel, AMD or equivalent) , Apple Silicon M1/M2
+
 ✓ Memory: 8 GB
+
 ✓ Disk space: 3 GB (including CALDB)
 
 * The eSASS4DR1 package can be downloaded as a unique archive tarball from the following link:
-[https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/ eSASS4DR1.tgz](https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/ eSASS4DR1.tgz)
+[https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/eSASS4DR1.tgz](https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/eSASS4DR1.tgz)
 
-Move this script to a clean directory (e.g. create a new sub-directory named as "esass" in your home directory) and make the script executable by typing:
-
-    chmod +x eSASS4EDRmirror.sh
 
 * The CALDB is also available as a unique tarball. You can download it via the following link:
-[https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/ caldb4DR1.tgz](https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/ caldb4DR1.tgz)
+[https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/caldb4DR1.tgz](https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/caldb4DR1.tgz)
 
 
-**2.2 Install eSASS4DR1 on Linux (Ubuntu systems) and macOS**
+#### 2.2 Install eSASS4DR1 on Linux (Ubuntu systems) and macOS
 
 (1) After downloading the eSASS4DR1 package and CALDB, move the files to an installation folder (/<my eSASS path>/) and extract the content:
 
@@ -229,10 +237,6 @@ There may be a lot of outputs, choose the one named like lib*-dev (e.g. lib64rea
 
     sudo apt-get -y install lib64readline-dev
     
-★ To identify if the eSASS4DR1 configuration succeeded, the end of the configure command output must look like this:
-
-  ### CALDB SETUP ###
-  configure: Using caldb directory /full.path/to/caldb as you provided for setup ### Installation location: /<my eSASS path>/eSASS4DR1/eSASS ###
 
 If no more errors occur when configuring, continue to run make:
 
@@ -248,8 +252,7 @@ Finally, run make clean to remove those unnecessary files and enable the eSASS e
 <u>It is recommended to add this line to your profile (.bashrc, zshrc or cshrc) for automatic initialisation.</u>
 
 
-* * *
-
+========================================================================================================
 <ins>If you have more questions about the installation, please feel free to contact me.</ins>
 
 My email: helin@smail.nju.edu.cn
