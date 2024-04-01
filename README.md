@@ -18,7 +18,7 @@
 
 For Mac users (Intel/M1/M2 chip):
 
-following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html)
+following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/macos.html)
 
     install [XQuartz](https://www.xquartz.org)
     xcode-select --install
@@ -29,7 +29,7 @@ following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ macos.html](ht
 
 For Ubuntu users:
 
-following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ linux.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ linux.html)
+following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/ linux.html](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/linux.html)
 
     sudo apt-get -y install libreadline-dev
     sudo apt-get -y install libncurses5-dev
