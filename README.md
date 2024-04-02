@@ -14,7 +14,8 @@
 
 <ins>Ensure you have enough memory (> 10 GB) to download and install heasoft successfully!</ins>
 
-<br><br><br>
+<br>
+
 #### 1.2 Install the prerequisite packages (X11, Compilers: C, C++, Perl & Fortran, Python)
 
 For Mac users (Intel/M1/M2 chip):
@@ -50,7 +51,8 @@ following: [https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/linux.html](htt
     sudo apt-get -y install python3-astropy
     sudo apt-get -y install python3-scipy
     
-<br><br><br>
+<br>
+
 #### 1.3 Configure the software
 
 (1) Unpack the downloaded file in a clean directory (your home directory is highly recommended)
@@ -100,7 +102,8 @@ This step will capture the screen outputs to text files, and if you want to see 
 
 <ins> The make step may take a long time (~ 1 hour, just let it run and do your things). If your process finished in a few minutes, check if there are any errors. </ins>
 
-<br><br><br>
+<br>
+
 #### 1.4 Initialization
 
 Add the following commands in your profile --
@@ -136,12 +139,14 @@ For more details about the HEASoft installation, it is highly recommend to refer
 
 You can always find some useful information in these official guide.
 
-<br><br><br>
+<br>
+
 ### 2. Install eSASS
 
 For reference, see:
 [https://erosita.mpe.mpg.de/edr/DataAnalysis/esassinstall.html](https://erosita.mpe.mpg.de/edr/DataAnalysis/esassinstall.html)
-<br><br><br>
+
+<br>
 
 #### 2.1 Download eSASS and CALDB
 
@@ -160,7 +165,7 @@ Minimum requirements:
 * The CALDB is also available as a unique tarball. You can download it via the following link:
 [https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/caldb4DR1.tgz](https://erosita.mpe.mpg.de/dr1/eSASS4DR1/eSASS4DR1_installation/caldb4DR1.tgz)
 
-<br><br><br>
+<br>
 
 #### 2.2 Install eSASS4DR1 on Linux (Ubuntu systems) and macOS
 
